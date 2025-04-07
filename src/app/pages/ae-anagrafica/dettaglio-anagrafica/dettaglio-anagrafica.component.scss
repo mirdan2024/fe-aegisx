@@ -1,0 +1,126 @@
+
+// Stili per la pagina di Dettaglio Anagrafica
+
+/* Container principale per il dettaglio */
+.dettaglio-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Titolo della pagina */
+h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Container per le informazioni dell'anagrafica */
+.info-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Stili per le etichette e i valori */
+.info-container .info-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #555;
+}
+
+.info-container .info-item label {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Sezione dei dettagli dell'indirizzo */
+.address-section {
+  background-color: #f8f8f8;
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+.address-section h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.address-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.address-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #555;
+}
+
+.address-item label {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Pulsanti per la modifica e la cancellazione */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type='button'].btn-modifica {
+  background-color: #ffc107;
+  color: white;
+  border: none;
+}
+
+button[type='button'].btn-modifica:hover {
+  background-color: #e0a800;
+}
+
+button[type='button'].btn-cancella {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+}
+
+button[type='button'].btn-cancella:hover {
+  background-color: #c82333;
+}
+
+/* Responsività */
+@media (max-width: 768px) {
+  .info-container {
+    grid-template-columns: 1fr; /* Una colonna su schermi piccoli */
+  }
+
+  .address-container {
+    grid-template-columns: 1fr; /* Una colonna per gli indirizzi */
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}

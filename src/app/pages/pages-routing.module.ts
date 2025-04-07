@@ -11,6 +11,11 @@ const routes: Routes = [{
   component: PagesComponent,
   children: [
     {
+      path: 'ae-anagrafica',
+      loadChildren: () => import('./ae-anagrafica/ae-anagrafica.module')
+        .then(m => m.AnagraficaModule),
+    },
+    {
       path: 'dashboard',
       component: ECommerceComponent,
     },

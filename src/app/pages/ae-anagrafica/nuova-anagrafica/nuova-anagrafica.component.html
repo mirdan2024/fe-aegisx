@@ -1,0 +1,152 @@
+<div class="card">
+  <div class="card-header">
+    <h3>Nuova Anagrafica</h3>
+  </div>
+  <div class="card-body">
+    <form (ngSubmit)="saveAnagrafica()">
+
+      <!-- Campo Tipo -->
+      <div class="form-group">
+        <label for="tipo">Tipo</label>
+        <select class="form-control" id="tipo" formControlName="tipo" required>
+          <option value="">Seleziona</option>
+          <option value="persona_fisica">Persona Fisica</option>
+          <option value="persona_giuridica">Persona Giuridica</option>
+        </select>
+      </div>
+
+      <!-- Campo Cognome -->
+      <div class="form-group">
+        <label for="cognome">Cognome</label>
+        <input type="text" class="form-control" id="cognome" formControlName="cognome" required>
+      </div>
+
+      <!-- Campo Nome -->
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" class="form-control" id="nome" formControlName="nome" required>
+      </div>
+
+      <!-- Campo Sesso -->
+      <div class="form-group">
+        <label for="sesso">Sesso</label>
+        <select class="form-control" id="sesso" formControlName="sesso" required>
+          <option value="">Seleziona</option>
+          <option value="maschio">Maschio</option>
+          <option value="femmina">Femmina</option>
+        </select>
+      </div>
+
+      <!-- Campo Codice Fiscale -->
+      <div class="form-group">
+        <label for="codice_fiscale">Codice Fiscale</label>
+        <input type="text" class="form-control" id="codice_fiscale" formControlName="codice_fiscale" required>
+      </div>
+
+      <!-- Campo Partita IVA -->
+      <div class="form-group">
+        <label for="partita_iva">Partita IVA</label>
+        <input type="text" class="form-control" id="partita_iva" formControlName="partita_iva">
+      </div>
+
+      <!-- Campo Telefono -->
+      <div class="form-group">
+        <label for="telefono">Telefono</label>
+        <input type="text" class="form-control" id="telefono" formControlName="telefono">
+      </div>
+
+      <!-- Campo Email -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" formControlName="email" required>
+      </div>
+
+      <!-- Campo Email PEC -->
+      <div class="form-group">
+        <label for="email_pec">Email PEC</label>
+        <input type="email" class="form-control" id="email_pec" formControlName="email_pec">
+      </div>
+
+      <!-- Campo Data Nascita -->
+      <div class="form-group">
+        <label for="data_nascita">Data di Nascita</label>
+        <input type="date" class="form-control" id="data_nascita" formControlName="data_nascita" required>
+      </div>
+
+      <!-- Campo Comune Nascita -->
+      <div class="form-group">
+        <label for="comune_nascita">Comune di Nascita</label>
+        <select class="form-control" id="comune_nascita" formControlName="comune_nascita" [disabled]="loading" required>
+          <option *ngFor="let comune of comuniNascita" [value]="comune.id">{{comune.name}}</option>
+        </select>
+      </div>
+
+      <!-- Campo Stato Nascita -->
+      <div class="form-group">
+        <label for="stato_nascita">Stato di Nascita</label>
+        <select class="form-control" id="stato_nascita" formControlName="stato_nascita" [disabled]="loading" required>
+          <option *ngFor="let stato of statiNascita" [value]="stato.id">{{stato.name}}</option>
+        </select>
+      </div>
+
+      <!-- Sezione Residenza -->
+      <h4>Residenza</h4>
+      <div class="form-group">
+        <label for="residenza_toponimo">Toponimo</label>
+        <input type="text" class="form-control" id="residenza_toponimo" formControlName="residenza_toponimo" required>
+      </div>
+      <div class="form-group">
+        <label for="residenza_indirizzo">Indirizzo</label>
+        <input type="text" class="form-control" id="residenza_indirizzo" formControlName="residenza_indirizzo" required>
+      </div>
+      <div class="form-group">
+        <label for="residenza_num_civico">Numero Civico</label>
+        <input type="text" class="form-control" id="residenza_num_civico" formControlName="residenza_num_civico" required>
+      </div>
+      <div class="form-group">
+        <label for="residenza_comune">Comune</label>
+        <select class="form-control" id="residenza_comune" formControlName="residenza_comune" [disabled]="loading" required>
+          <option *ngFor="let comune of comuni" [value]="comune.id">{{comune.name}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="residenza_cap">CAP</label>
+        <input type="text" class="form-control" id="residenza_cap" formControlName="residenza_cap" required>
+      </div>
+
+      <!-- Sezione Domicilio -->
+      <h4>Domicilio</h4>
+      <div class="form-group">
+        <label for="domicilio_toponimo">Toponimo</label>
+        <input type="text" class="form-control" id="domicilio_toponimo" formControlName="domicilio_toponimo" required>
+      </div>
+      <div class="form-group">
+        <label for="domicilio_indirizzo">Indirizzo</label>
+        <input type="text" class="form-control" id="domicilio_indirizzo" formControlName="domicilio_indirizzo" required>
+      </div>
+      <div class="form-group">
+        <label for="domicilio_num_civico">Numero Civico</label>
+        <input type="text" class="form-control" id="domicilio_num_civico" formControlName="domicilio_num_civico" required>
+      </div>
+      <div class="form-group">
+        <label for="domicilio_comune">Comune</label>
+        <select class="form-control" id="domicilio_comune" formControlName="domicilio_comune" [disabled]="loading" required>
+          <option *ngFor="let comune of comuni" [value]="comune.id">{{comune.name}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="domicilio_cap">CAP</label>
+        <input type="text" class="form-control" id="domicilio_cap" formControlName="domicilio_cap" required>
+      </div>
+
+      <!-- Messaggio di caricamento -->
+      <div *ngIf="loading" class="spinner-border" role="status">
+        <span class="sr-only">Caricamento...</span>
+      </div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="!anagraficaForm.valid || loading">
+        Salva
+      </button>
+    </form>
+  </div>
+</div>

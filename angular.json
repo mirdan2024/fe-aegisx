@@ -92,7 +92,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngx-admin-demo:build"
+            "browserTarget": "ngx-admin-demo:build",
+            "hmr": true // Aggiungi questa riga per abilitare HMR
           },
           "configurations": {
             "production": {

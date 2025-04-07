@@ -1,0 +1,30 @@
+<div class="card">
+  <div class="card-header">
+    <h3>Elenco Anagrafiche</h3>
+    <button class="btn btn-primary" (click)="newAnagrafica()">Nuova Anagrafica</button>
+  </div>
+  <div class="card-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Cognome</th>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Telefono</th>
+          <th>Dettagli</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let anagrafica of anagrafiche">
+          <td>{{ anagrafica.cognome }}</td>
+          <td>{{ anagrafica.nome }}</td>
+          <td>{{ anagrafica.email }}</td>
+          <td>{{ anagrafica.telefono }}</td>
+          <td>
+            <button class="btn btn-info" (click)="viewAnagrafica(anagrafica.id)">Dettagli</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

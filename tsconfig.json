@@ -21,6 +21,10 @@
         "name": "tslint-language-service"
       }
     ],
-    "useDefineForClassFields": false
+    "useDefineForClassFields": false,
+    "baseUrl": "./src", // Indica la base per risolvere i percorsi relativi
+    "paths": {
+      "@core/*": [ "app/@core/*" ] // Aggiungi questo per risolvere l'alias @core
+    }
   }
 }

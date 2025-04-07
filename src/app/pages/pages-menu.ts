@@ -2,6 +2,20 @@ import { NbMenuItem } from '@nebular/theme';
 
 export const MENU_ITEMS: NbMenuItem[] = [
   {
+    title: 'Anagrafica',
+    icon: 'person-outline',
+    children: [
+      {
+        title: 'Elenco Anagrafiche',
+        link: './ae-anagrafica/elenco-anagrafiche',
+      },
+      {
+        title: 'Nuova Anagrafica',
+        link: './ae-anagrafica/nuova-anagrafica',
+      },
+    ],
+  },
+  {
     title: 'E-commerce',
     icon: 'shopping-cart-outline',
     link: '/pages/dashboard',
@@ -11,6 +25,20 @@ export const MENU_ITEMS: NbMenuItem[] = [
     title: 'IoT Dashboard',
     icon: 'home-outline',
     link: '/pages/iot-dashboard',
+  },
+  {
+    title: 'Anagrafiche',
+    icon: 'person-outline',
+    children: [
+      {
+        title: 'Elenco Anagrafiche',
+        link: '/views/anagrafica/elenco-anagrafiche/elenco-anagrafiche',
+      },
+      {
+        title: 'Nuova Anagrafica',
+        link: '/views/anagrafica/nuova-anagrafica/nuova-anagrafica',
+      }
+    ]
   },
   {
     title: 'FEATURES',
