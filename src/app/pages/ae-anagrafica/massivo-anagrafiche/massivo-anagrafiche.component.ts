@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 
 
 @Component({
-  selector: 'app-massivo-anagrafiche',
+  selector: 'ngx-massivo-anagrafiche',
   templateUrl: './massivo-anagrafiche.component.html',
   styleUrls: ['./massivo-anagrafiche.component.scss']
 })
