@@ -1,0 +1,18 @@
+<div class="file-drop-container">
+  <ngx-file-drop [accept]="'text/csv'"
+                 [dropZoneLabel]="'Trascina qui il tuo file CSV'"
+                 (onFileDrop)="onFileDrop($event)"
+                 (onFileOver)="fileOver($event)"
+                 (onFileLeave)="fileLeave($event)">
+  </ngx-file-drop>
+
+  <!-- Visualizza i file caricati -->
+  <div *ngIf="files.length > 0">
+    <h4>File caricati:</h4>
+    <ul>
+      <li *ngFor="let file of files">
+        {{ file.fileEntry.name }}
+      </li>
+    </ul>
+  </div>
+</div>

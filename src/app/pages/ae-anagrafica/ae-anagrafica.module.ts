@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';  // Importa ReactiveFormsModule
 import {
   NbActionsModule,
@@ -16,6 +16,7 @@ import { ThemeModule } from '../../@theme/theme.module';
 import { AnagraficaRoutingModule } from './ae-anagrafica-routing.module';
 import { AnagraficaComponent } from './ae-anagrafica.component';
 import { FormsModule as ngFormsModule } from '@angular/forms';
+import { MassivoAnagraficheComponent } from './massivo-anagrafiche/massivo-anagrafiche.component';
 
 
 @NgModule({
@@ -36,7 +37,9 @@ import { FormsModule as ngFormsModule } from '@angular/forms';
     ReactiveFormsModule,
   ],
   declarations: [
-    AnagraficaComponent
+    AnagraficaComponent,
+    MassivoAnagraficheComponent
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AnagraficaModule { }

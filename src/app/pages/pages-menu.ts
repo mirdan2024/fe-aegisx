@@ -13,6 +13,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Nuova Anagrafica',
         link: './ae-anagrafica/nuova-anagrafica',
       },
+      {
+        title: 'Massivo Anagrafiche',
+        link: './ae-anagrafica/massivo-anagrafiche',
+      },
     ],
   },
   {

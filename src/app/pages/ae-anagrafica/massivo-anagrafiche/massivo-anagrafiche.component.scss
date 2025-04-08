@@ -1,0 +1,21 @@
+.file-drop-container {
+  margin: 20px;
+  padding: 20px;
+  border: 2px dashed #ccc;
+  text-align: center;
+  cursor: pointer;
+}
+
+.file-drop-container .ngx-file-drop-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 18px;
+  color: #aaa;
+}
+
+.file-drop-container ul {
+  list-style-type: none;
+  padding: 0;
+}
