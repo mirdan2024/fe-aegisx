@@ -1,21 +1,11 @@
-.file-drop-container {
-  margin: 20px;
+/* Aggiungi eventuali stili personalizzati per la tua pagina */
+.dropzone {
+  border: 2px dashed #4CAF50;
   padding: 20px;
-  border: 2px dashed #ccc;
   text-align: center;
-  cursor: pointer;
 }
 
-.file-drop-container .ngx-file-drop-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-  font-size: 18px;
-  color: #aaa;
-}
-
-.file-drop-container ul {
-  list-style-type: none;
-  padding: 0;
+.dz-message {
+  font-size: 16px;
+  color: #4CAF50;
 }

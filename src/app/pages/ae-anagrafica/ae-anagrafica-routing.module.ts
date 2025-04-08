@@ -5,7 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AnagraficaComponent } from './ae-anagrafica.component';
 import { NuovaAnagraficaComponent } from './nuova-anagrafica/nuova-anagrafica.component';
 import { ElencoAnagraficheComponent } from './elenco-anagrafiche/elenco-anagrafiche.component';
-import { MassivoAnagraficheComponent } from './massivo-anagrafiche/massivo-anagrafiche.component';
+import {  MassivoAnagraficheComponent } from './massivo-anagrafiche/massivo-anagrafiche.component';
+
 
 const routes: Routes = [
   {

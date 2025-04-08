@@ -1,5 +1,8 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';  // Importa ReactiveFormsModule
+
+import {  NgxDropzoneModule } from 'ngx-dropzone';
+
 import {
   NbActionsModule,
   NbButtonModule,
@@ -18,7 +21,6 @@ import { AnagraficaComponent } from './ae-anagrafica.component';
 import { FormsModule as ngFormsModule } from '@angular/forms';
 import { MassivoAnagraficheComponent } from './massivo-anagrafiche/massivo-anagrafiche.component';
 
-
 @NgModule({
   imports: [
     ThemeModule,
@@ -35,6 +37,7 @@ import { MassivoAnagraficheComponent } from './massivo-anagrafiche/massivo-anagr
     NbIconModule,
     ngFormsModule,
     ReactiveFormsModule,
+    NgxDropzoneModule
   ],
   declarations: [
     AnagraficaComponent,

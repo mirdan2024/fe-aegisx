@@ -1,4 +1,6 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
+
+
 
 
 @Component({
@@ -6,40 +8,20 @@ import { Component } from "@angular/core";
   templateUrl: './massivo-anagrafiche.component.html',
   styleUrls: ['./massivo-anagrafiche.component.scss']
 })
-export class MassivoAnagraficheComponent {
-  files: any[] = []; // Per memorizzare i file caricati
+export class MassivoAnagraficheComponent implements OnInit {
+  
 
-  // Gestore evento di drop
-  public dropped(files: any[]) {
-    this.files = files;
-    console.log(files);
-  }
+  ngOnInit(): void { }
 
-  // Gestore evento di file selezionato
-  public fileOver(event: any) {
-    console.log('File over', event);
-  }
+  files: File[] = [];
 
-  // Gestore evento quando il file è uscito dalla zona di drop
-  public fileLeave(event: any) {
-    console.log('File left', event);
-  }
-
-  // Definisci il metodo onFileDrop per gestire l'evento
-  onFileDrop(event: any[]) {
-    // Log dei file ricevuti
+  onSelect(event) {
     console.log(event);
+    this.files.push(...event.addedFiles);
+  }
 
-    // Esegui altre operazioni sui file, come la lettura del contenuto CSV
-    for (const droppedFile of event) {
-      // Puoi gestire il file come preferisci
-      if (droppedFile.fileEntry.isFile) {
-        const file = droppedFile.fileEntry as FileSystemFileEntry;
-        file.file((f) => {
-          console.log('File dropped:', f);
-          // Qui puoi fare ciò che vuoi con il file
-        });
-      }
-    }
+  onRemove(event) {
+    console.log(event);
+    this.files.splice(this.files.indexOf(event), 1);
   }
 }

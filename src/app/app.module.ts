@@ -20,6 +20,8 @@ import {
   NbToastrModule,
   NbWindowModule,
 } from '@nebular/theme';
+import { AnagraficaModule } from './pages/ae-anagrafica/ae-anagrafica.module';
+import { NgxDropzoneModule } from 'ngx-dropzone';
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,6 +30,8 @@ import {
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    AnagraficaModule,
+    NgxDropzoneModule,
     NbSidebarModule.forRoot(),
     NbMenuModule.forRoot(),
     NbDatepickerModule.forRoot(),
