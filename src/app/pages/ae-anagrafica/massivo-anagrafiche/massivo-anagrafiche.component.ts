@@ -8,10 +8,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './massivo-anagrafiche.component.html',
   styleUrls: ['./massivo-anagrafiche.component.scss']
 })
-export class MassivoAnagraficheComponent implements OnInit {
-  
+export class MassivoAnagraficheComponent {
 
-  ngOnInit(): void { }
 
   files: File[] = [];
 
